@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ES6",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "downlevelIteration": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "stripInternal": true,
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
