@@ -1,4 +1,4 @@
-import { createStyleContext, StyleRegister, stylesheet } from "../src/index";
+import { createStyles, StyleRegister, stylesheet } from "../src/index";
 
 const ButtonStyle = stylesheet(
   "Button",
@@ -7,7 +7,7 @@ const ButtonStyle = stylesheet(
         --button-color: red;
     }
 
-    button {
+    :scope:is(button) {
         color: var(--button-color);
     }
 `
@@ -31,10 +31,6 @@ const register = new StyleRegister({
   Input: InputStyle,
 });
 
-const ctx = createStyleContext(register);
+const ctx = createStyles(register);
 
-const s = ctx.useStyleSheet("Button");
-
-s.useDynamicSheet({
-  "button-color": "green",
-});
+const s = ctx.useDynamicStyleSheet("Input", { "border-color": "red" });

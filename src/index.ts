@@ -1,4 +1,6 @@
-export { createStyleContext } from "./style-provider";
+export { createStyles } from "./style-provider";
+export type { OverridesForStyle } from "./style-provider";
 export { StyleRegister } from "./style-register";
 export type { Styles } from "./style-register";
-export { stylesheet, StyleSheet } from "./stylesheet/stylesheet";
+export { stylesheet } from "./stylesheet/create-stylesheet";
+export { StyleSheet } from "./stylesheet/stylesheet";

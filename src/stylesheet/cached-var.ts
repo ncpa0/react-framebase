@@ -1,5 +1,8 @@
 export class CachedVar {
+  public readonly defaultValue: string;
+
   constructor(private readonly name: string, private value: string) {
+    this.defaultValue = value;
     this.setValue(value);
   }
 

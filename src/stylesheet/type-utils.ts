@@ -1,3 +1,5 @@
+import type { StyleSheet } from "./stylesheet";
+
 export type GetVarName<V> = V extends `${infer N}:${string}` ? N : never;
 
 export type ScopeOf<R extends string> =
@@ -16,3 +18,6 @@ export type StylesheetParams<C extends string> = Record<
   CssVars<ScopeOf<C>>,
   string
 >;
+
+export type ExtractStyleSheetParams<S extends StyleSheet<any>> =
+  S extends StyleSheet<infer P> ? P : never;
